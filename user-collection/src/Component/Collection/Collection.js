@@ -20,12 +20,7 @@ const Collection = () => {
 
     const [userSalary, setUserSalary] = useState([])
 
-    const handleSalary = (salary) =>{
-        const newSalary = [...userSalary, salary];
-        setUserSalary(newSalary);
-
-    }
-
+   
     return (
         <div className = "collection-container">
 
@@ -33,7 +28,6 @@ const Collection = () => {
                 {
                     data.map(value => <User 
                     handleAddUser = {handleAddUser}
-                    handleSalary = {handleSalary}
                     user = {value}>
 
                     </User> )
@@ -43,7 +37,7 @@ const Collection = () => {
             </div>
 
             <div className="cart-container">
-                <Cart cart = {cart} salary = {userSalary}></Cart>
+                <Cart cart = {cart} ></Cart>
 
             </div>
             

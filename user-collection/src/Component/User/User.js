@@ -20,9 +20,7 @@ const User = (props) => {
                 <p><small>Salary: {salary}</small></p>
                 <button
                     className = "main-button"
-                    onClick = {() => {
-                        props.handleAddUser(props.user);
-                        props.handleSalary(props.user.salary);} } >
+                    onClick = {() => props.handleAddUser(props.user) } >
 
                     <FontAwesomeIcon icon={faUser} /> Add to Contacts
 

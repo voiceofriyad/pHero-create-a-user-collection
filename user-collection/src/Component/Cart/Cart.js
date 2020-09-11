@@ -10,6 +10,11 @@ const Cart = (props) => {
         total = total + +userSalary.salary;
     }
 
+    const formatNumber = num => {
+        const precision = num.toFixed(2);
+        return Number (precision);
+    }
+
     
 
 
@@ -17,7 +22,7 @@ const Cart = (props) => {
         <div>
             <h3> Total Contacts: {cart.length}</h3>
             
-            <h3> Person Salaries: {total} </h3>       
+            <h3> Person Salaries: ${formatNumber(total)} </h3>       
                       
         </div>
     );
